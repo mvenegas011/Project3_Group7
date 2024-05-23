@@ -45,11 +45,22 @@ The images were collected from pediatric patients (ages 1-5) at Guangzhou Women 
   * Training accuracy and validation scores are evaluated and printed.
   * The best validation accuracy achieved is displayed.
 
-## DETAILED RESULTS
-xxxxxxxxxxxxxxxxxxxxxxx
+## MODEL DETAILS
+  * Used VGG16 for transfer learning.
+  * Freezed all but the last three layers of the VGG16 model.
+  * Sequential model with additional layers.
+  * Compiled with Adam optimizer and binary cross entropy 
+  * Trained for 6 epochs.
+  * Freezing the base model: Prevents the pre-trained weights from being updated, retaining the learned features from the original training dataset.
+  * Adding custom layers: Allows you to adapt the model to your specific task and dataset.
+  * Fine-tuning: Optionally, after initial training, unfreeze some layers and continue training with a lower learning rate to further adapt the pre-trained features to your dataset.
+  * This approach leverages the powerful features learned by VGG16 on large datasets like ImageNet, while also allowing you to customize the model for your specific needs.
+  * Test set for performance evaluation
+  * Prediction
+  * Confusion matrix
 
 ## DATASET PROPERTIES
-yyyyyyyyyyyyyyyyyyyyyyyyyyyy
+![image](https://github.com/mvenegas011/Project3_Group7/assets/33967792/4b19937d-9732-4c56-875c-61d69cf59aa7)
 
 ## ACKNOWLEDGEMENTS 
 Data: https://data.mendeley.com/datasets/rscbjbr9sj/2
